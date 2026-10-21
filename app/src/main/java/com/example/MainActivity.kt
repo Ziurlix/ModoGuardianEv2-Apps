@@ -38,7 +38,7 @@ class MainActivity : ComponentActivity() {
                             // Pantalla Login
                             composable(route = "login") {
                                 LoginScreen(
-                                    viewModel = viewModel(),
+                                    viewModel = viewModel,
                                     onLoginSuccess = {
                                         //
                                         val rutaDestino = when (viewModel.rolActivo) {
@@ -56,7 +56,7 @@ class MainActivity : ComponentActivity() {
                             // Pantalla Principal - Rol Administrador
                             composable(route = "home_admin") {
                                 HomeScreen(
-                                    viewModel = viewModel(),
+                                    viewModel = viewModel,
                                     onCerrarSesion = {
                                         navController.navigate(route = "login") {
                                             popUpTo(route = "home_admin") { inclusive = true }
@@ -68,7 +68,7 @@ class MainActivity : ComponentActivity() {
                             // Pantalla Principal - Rol Supervisor
                             composable(route = "home_supervisor") {
                                 HomeScreen(
-                                    viewModel = viewModel(),
+                                    viewModel = viewModel,
                                     onCerrarSesion = {
                                         navController.navigate(route = "login") {
                                             popUpTo(route = "home_supervisor") { inclusive = true }
@@ -80,7 +80,7 @@ class MainActivity : ComponentActivity() {
                             // Pantalla Principal - Rol Operador
                             composable(route = "home_operador") {
                                 HomeScreen(
-                                    viewModel = viewModel(),
+                                    viewModel = viewModel,
                                     onCerrarSesion = {
                                         navController.navigate(route = "login") {
                                             popUpTo(route = "home_operador") { inclusive = true }
