@@ -41,7 +41,7 @@ class LoginViewModel : ViewModel() {
     }
 
     fun isLoginEnabled(): Boolean {
-        return email.isNotBlank() && password.isNotBlank() && !isBlocked
+        return !isBlocked
     }
 
     fun iniciarSesion() {
